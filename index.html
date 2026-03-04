@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Degree Study Command Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="top-nav container">
+        <h1 contenteditable="true" data-edit-key="siteTitle">Study Command Center</h1>
+        <p contenteditable="true" data-edit-key="siteSubtitle">Degree Preparation Dashboard (Editable for Every Semester)</p>
+      </nav>
+
+      <div class="hero-content container">
+        <div>
+          <h2 contenteditable="true" data-edit-key="heroHeading">Plan Smarter. Revise Better. Score Higher.</h2>
+          <p contenteditable="true" data-edit-key="heroText">
+            Edit all sections below according to your next semester subjects, timetable, goals, and study strategy.
+          </p>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <span id="totalSubjects">0</span>
+            <p>Subjects</p>
+          </div>
+          <div>
+            <span id="overallProgress">0%</span>
+            <p>Overall Preparation</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container dashboard-grid">
+      <section class="card">
+        <h3>🎯 Semester Goal</h3>
+        <form id="goalForm" class="inline-form">
+          <input type="text" id="goalInput" placeholder="Example: CGPA 8.8+" required />
+          <button type="submit">Save Goal</button>
+        </form>
+        <p class="saved-text">Current Goal: <strong id="savedGoal">Not set yet</strong></p>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h3>📊 Results</h3>
+          <button type="button" id="addSubjectBtn" class="secondary-btn">+ Subject</button>
+        </div>
+        <p class="helper">Edit subject and result % here.</p>
+        <div class="table" id="resultTable"></div>
+      </section>
+
+      <section class="card">
+        <h3>📚 Study Preparation</h3>
+        <p class="helper">Edit subject and preparation % here.</p>
+        <div id="prepTable" class="table"></div>
+      </section>
+
+      <section class="card">
+        <h3>🔁 Revision Count</h3>
+        <p class="helper">Edit subject and revision count here.</p>
+        <div id="revisionTable" class="table"></div>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h3>🗓️ Exam Time Table</h3>
+          <button type="button" id="addExamBtn" class="secondary-btn">+ Exam</button>
+        </div>
+        <div id="examTable" class="table"></div>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h3>📝 Question Bank / Resources</h3>
+          <button type="button" id="addResourceBtn" class="secondary-btn">+ Resource</button>
+        </div>
+        <div id="questionBank" class="table"></div>
+      </section>
+
+      <section class="card full-width">
+        <div class="card-head">
+          <h3>🧠 Motivational Lines</h3>
+          <div class="row-actions">
+            <button id="newQuoteBtn" type="button" class="secondary-btn">Random Quote</button>
+            <button type="button" id="addQuoteBtn" class="secondary-btn">+ Add Quote</button>
+          </div>
+        </div>
+        <blockquote id="quoteText"></blockquote>
+        <div id="quoteList" class="table quote-list"></div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p contenteditable="true" data-edit-key="footerText">Built for your degree success • Stay consistent, stay confident.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
